@@ -1,0 +1,51 @@
+ticket_id,planta_id,fecha_creacion,estado,tipo,criticidad,equipo_id,descripcion,costo_estimado_usd,impacto_estimado_kwh,sla_objetivo_horas,responsable,fecha_estimada_resolucion
+TKT-0001,PV-001,2026-01-18,Pendiente,Predictivo,Crítica,INV-004,Mantenimiento de sistema de seguridad,16839.42,22082.41,4,Carlos Rodríguez,2026-02-15
+TKT-0002,PV-001,2026-02-08,Pendiente,Emergencia,Crítica,,Mantenimiento de sistema de seguridad,30834.84,8636.2,4,Carlos Rodríguez,2026-02-23
+TKT-0003,PV-001,2026-01-28,Pendiente,Predictivo,Crítica,INV-005,Falla en inversor - mensaje de error en pantalla,19093.9,23389.49,4,María González,2026-02-26
+TKT-0004,PV-001,2025-12-21,Pendiente,Predictivo,Crítica,TRAFO-002,Mantenimiento de sistema de seguridad,23930.74,12144.75,4,Juan Pérez,2026-02-20
+TKT-0005,PV-001,2026-02-07,Pendiente,Emergencia,Crítica,INV-001,Limpieza profunda de módulos fotovoltaicos,41835.42,21337.87,4,Ana Martínez,2026-02-17
+TKT-0006,PV-001,2025-12-28,Pendiente,Predictivo,Alta,INV-002,Falla en inversor - mensaje de error en pantalla,14908.99,5678.74,24,Ana Martínez,2026-02-13
+TKT-0007,PV-001,2026-01-21,Pendiente,Emergencia,Alta,INV-001,Reemplazo de ventiladores en inversor,14074.06,11015.61,24,María González,2026-02-24
+TKT-0008,PV-001,2026-02-03,Pendiente,Predictivo,Alta,INV-004,Reparación de estructura de soporte,10178.63,10013.39,24,Carlos Rodríguez,2026-02-15
+TKT-0009,PV-001,2026-01-09,Pendiente,Preventivo,Alta,,Reemplazo de ventiladores en inversor,10263.55,20766.65,24,Juan Pérez,2026-02-16
+TKT-0010,PV-001,2026-01-02,Pendiente,Correctivo,Alta,INV-003,Revisión de conexiones en string,10891.06,22946.98,24,Ana Martínez,2026-02-17
+TKT-0011,PV-001,2026-02-05,Pendiente,Emergencia,Alta,TRAFO-001,Revisión de conexiones en string,13592.73,21388.79,24,Carlos Rodríguez,2026-02-23
+TKT-0012,PV-001,2025-12-19,Pendiente,Correctivo,Alta,,Reparación de sistema de monitoreo,8226.84,5262.7,24,María González,2026-02-15
+TKT-0013,PV-001,2025-12-19,Pendiente,Correctivo,Alta,INV-002,Falla en inversor - mensaje de error en pantalla,11884.74,11610.63,24,Ana Martínez,2026-02-15
+TKT-0014,PV-001,2025-12-26,Pendiente,Emergencia,Alta,INV-005,Reparación de sistema de monitoreo,12556.58,8081.25,24,Carlos Rodríguez,2026-02-23
+TKT-0015,PV-001,2026-02-09,Pendiente,Emergencia,Alta,,Limpieza profunda de módulos fotovoltaicos,13461.46,17620.76,24,Ana Martínez,2026-02-22
+TKT-0016,PV-001,2026-01-05,En Progreso,Emergencia,Media,TRAFO-001,Revisión de sistema de puesta a tierra,1408.95,3888.06,72,Juan Pérez,2026-02-17
+TKT-0017,PV-001,2025-12-29,En Progreso,Correctivo,Media,TRAFO-002,Reemplazo de fusibles en caja combinadora,1214.77,3951.53,72,Carlos Rodríguez,2026-02-21
+TKT-0018,PV-001,2026-02-01,En Progreso,Preventivo,Media,INV-005,Reemplazo de fusibles en caja combinadora,4545.29,2337.38,72,Juan Pérez,2026-02-13
+TKT-0019,PV-001,2026-01-15,En Progreso,Emergencia,Media,INV-003,Mantenimiento de sistema SCADA,1251.4,3493.9,72,Carlos Rodríguez,2026-02-16
+TKT-0020,PV-001,2026-01-30,En Progreso,Preventivo,Media,,Mantenimiento preventivo trimestral - limpieza de paneles,4840.5,711.54,72,Carlos Rodríguez,2026-02-14
+TKT-0021,PV-001,2026-01-27,En Progreso,Predictivo,Media,INV-002,Mantenimiento de sistema de seguridad,4105.39,3932.39,72,Ana Martínez,2026-02-22
+TKT-0022,PV-001,2025-12-22,En Progreso,Preventivo,Media,,Mantenimiento de sistema de seguridad,4279.82,3602.87,72,Ana Martínez,2026-02-20
+TKT-0023,PV-001,2025-12-26,En Progreso,Preventivo,Media,,Inspección termográfica de paneles,4745.44,3966.95,72,María González,2026-02-16
+TKT-0024,PV-001,2026-01-25,En Progreso,Predictivo,Media,,Actualización de firmware de inversor,2194.32,2033.75,72,Carlos Rodríguez,2026-02-13
+TKT-0025,PV-001,2026-01-01,En Progreso,Emergencia,Media,INV-002,Limpieza profunda de módulos fotovoltaicos,2034.04,4536.18,72,Carlos Rodríguez,2026-02-21
+TKT-0026,PV-001,2026-01-21,Bloqueado,Correctivo,Media,INV-003,Revisión de sistema de puesta a tierra,1908.15,662.71,72,Juan Pérez,2026-02-13
+TKT-0027,PV-001,2026-01-16,Bloqueado,Preventivo,Media,INV-002,Inspección termográfica de paneles,4627.18,1634.96,72,Carlos Rodríguez,2026-02-14
+TKT-0028,PV-001,2025-12-31,Bloqueado,Preventivo,Media,INV-002,Falla en inversor - mensaje de error en pantalla,4872.64,3647.6,72,Ana Martínez,2026-02-18
+TKT-0029,PV-001,2025-12-19,Bloqueado,Correctivo,Media,TRAFO-002,Calibración de sensores de irradiancia,2069.03,1091.35,72,Juan Pérez,2026-02-18
+TKT-0030,PV-001,2026-01-25,Bloqueado,Emergencia,Media,INV-003,Revisión de conexiones en string,2766.09,3961.22,72,Juan Pérez,2026-02-17
+TKT-0031,PV-001,2026-01-15,Cerrado,Preventivo,Media,TRAFO-001,Inspección termográfica de paneles,4084.91,2723.89,72,Ana Martínez,
+TKT-0032,PV-001,2026-01-18,Cerrado,Preventivo,Media,INV-002,Mantenimiento de sistema de seguridad,2000.1,2907.95,72,Juan Pérez,
+TKT-0033,PV-001,2025-12-15,Cerrado,Correctivo,Media,TRAFO-001,Reparación de sistema de monitoreo,2079.29,1038.97,72,Carlos Rodríguez,
+TKT-0034,PV-001,2026-02-07,Cerrado,Preventivo,Media,,Mantenimiento de sistema de seguridad,2089.87,903.73,72,Carlos Rodríguez,
+TKT-0035,PV-001,2025-12-26,Cerrado,Emergencia,Media,INV-003,Mantenimiento de sistema de seguridad,2073.24,2328.06,72,Ana Martínez,
+TKT-0036,PV-001,2025-12-23,Cerrado,Predictivo,Baja,,Actualización de firmware de inversor,391.63,314.14,168,Carlos Rodríguez,
+TKT-0037,PV-001,2026-01-26,Cerrado,Predictivo,Baja,TRAFO-002,Revisión de conexiones en string,205.52,102.4,168,Juan Pérez,
+TKT-0038,PV-001,2026-01-02,Cerrado,Preventivo,Baja,TRAFO-002,Calibración de sensores de irradiancia,406.8,372.65,168,María González,
+TKT-0039,PV-001,2026-01-21,Cerrado,Correctivo,Baja,TRAFO-001,Revisión de sistema de puesta a tierra,748.94,151.55,168,Ana Martínez,
+TKT-0040,PV-001,2025-12-21,Cerrado,Emergencia,Baja,INV-001,Mantenimiento de sistema de seguridad,355.58,205.73,168,Juan Pérez,
+TKT-0041,PV-001,2025-12-20,Cerrado,Correctivo,Baja,INV-003,Reparación de estructura de soporte,206.16,489.48,168,María González,
+TKT-0042,PV-001,2026-01-20,Cerrado,Preventivo,Baja,INV-002,Revisión de transformador - ruido anormal,651.65,75.87,168,Carlos Rodríguez,
+TKT-0043,PV-001,2026-01-18,Cerrado,Emergencia,Baja,INV-003,Mantenimiento de sistema de seguridad,552.94,358.31,168,Juan Pérez,
+TKT-0044,PV-001,2026-01-24,Cerrado,Emergencia,Baja,TRAFO-002,Reparación de estructura de soporte,291.72,295.2,168,Carlos Rodríguez,
+TKT-0045,PV-001,2026-01-22,Cerrado,Preventivo,Baja,INV-004,Actualización de firmware de inversor,778.35,172.14,168,Juan Pérez,
+TKT-0046,PV-001,2026-02-04,Cerrado,Correctivo,Baja,TRAFO-002,Reparación de estructura de soporte,790.26,431.17,168,Ana Martínez,
+TKT-0047,PV-001,2026-01-07,Cerrado,Predictivo,Baja,,Reparación de sistema de monitoreo,679.08,289.12,168,Juan Pérez,
+TKT-0048,PV-001,2026-01-22,Cerrado,Predictivo,Baja,INV-001,Reemplazo de fusibles en caja combinadora,491.98,98.38,168,Ana Martínez,
+TKT-0049,PV-001,2026-02-11,Cerrado,Emergencia,Baja,TRAFO-002,Revisión de sistema de puesta a tierra,539.03,297.77,168,Carlos Rodríguez,
+TKT-0050,PV-001,2026-02-02,Cerrado,Preventivo,Baja,INV-004,Revisión de conexiones en string,776.87,274.51,168,Carlos Rodríguez,
