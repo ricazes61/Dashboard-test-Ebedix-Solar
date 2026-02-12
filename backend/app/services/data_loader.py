@@ -167,6 +167,9 @@ class DataLoader:
                 df['fecha_estimada_resolucion'], errors='coerce'
             ).dt.strftime('%Y-%m-%d')
         
+        # Reemplazar NaN con None para campos opcionales
+        df = df.where(pd.notna(df), None)
+        
         return [Ticket(**row.to_dict()) for _, row in df.iterrows()]
 
 # Instancia global

@@ -19,7 +19,10 @@ class TTSService:
         self.client = None
         
         if settings.openai_api_key:
-            self.client = OpenAI(api_key=settings.openai_api_key)
+            try:
+                self.client = OpenAI(api_key=settings.openai_api_key)
+            except Exception as e:
+                logger.warning(f"No se pudo inicializar OpenAI client: {e}")
     
     def generate_audio_summary(
         self,
