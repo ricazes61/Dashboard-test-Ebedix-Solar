@@ -119,7 +119,7 @@ class SettingsRequest(BaseModel):
 
 class SettingsResponse(BaseModel):
     data_folder: str
-    last_reload: Optional[datetime] = None
+    last_reload: Optional[str] = None
     files_loaded: Dict[str, int] = {}
 
 # ========== Report ==========

@@ -9,7 +9,7 @@ from app.services.data_loader import data_loader
 
 router = APIRouter()
 
-SETTINGS_FILE = Path("./backend/settings.json")
+SETTINGS_FILE = Path("settings.json")
 
 @router.get("/settings", response_model=SettingsResponse)
 async def get_settings() -> SettingsResponse:
