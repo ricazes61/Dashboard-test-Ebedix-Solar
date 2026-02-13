@@ -23,7 +23,7 @@ python -m pip install --upgrade pip setuptools wheel
 echo    - Instalando pandas y numpy...
 pip install --only-binary :all: "pandas>=3.0.0" "numpy>=2.0.0"
 echo    - Instalando resto de dependencias...
-pip install --only-binary :all: fastapi==0.104.1 uvicorn[standard]==0.24.0 python-dotenv==1.0.0 python-multipart==0.0.6 pydantic==2.5.0 pydantic-settings==2.1.0 openpyxl==3.1.2 reportlab==4.0.7 Pillow==10.1.0 openai==1.3.7 twilio==8.10.3 python-dateutil==2.8.2 pytz==2023.3 aiofiles==23.2.1
+pip install --only-binary :all: fastapi==0.104.1 uvicorn[standard]==0.24.0 python-dotenv==1.0.0 python-multipart==0.0.6 "pydantic>=2.10.0" "pydantic-settings>=2.7.0" openpyxl==3.1.2 reportlab==4.0.7 Pillow==10.1.0 openai==1.3.7 twilio==8.10.3 python-dateutil==2.8.2 pytz==2023.3 aiofiles==23.2.1
 echo    - Dependencias instaladas correctamente
 
 REM Paso 3: Crear settings.json

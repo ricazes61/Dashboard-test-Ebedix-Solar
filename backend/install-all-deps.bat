@@ -40,7 +40,7 @@ if errorlevel 1 (
 
 echo.
 echo [4/6] Instalando FastAPI, Uvicorn y Pydantic...
-pip install --only-binary :all: fastapi==0.104.1 uvicorn[standard]==0.24.0 pydantic==2.5.0 pydantic-settings==2.1.0
+pip install --only-binary :all: fastapi==0.104.1 uvicorn[standard]==0.24.0 "pydantic>=2.10.0" "pydantic-settings>=2.7.0"
 if errorlevel 1 (
     echo [ERROR] Fallo al instalar FastAPI/Uvicorn
     pause
