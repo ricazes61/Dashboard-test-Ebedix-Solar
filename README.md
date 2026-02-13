@@ -2,7 +2,46 @@
 
 Aplicación web full-stack para análisis ejecutivo de plantas solares fotovoltaicas. Demo realista y fácil de ejecutar localmente con arquitectura preparada para migración a producción.
 
-![Logo](https://i.imgur.com/qeF0RYQ.png)
+## 🚀 **INICIO RÁPIDO**
+
+### **Opción 1: Script Automático (Recomendado)**
+```cmd
+cd solar-pv-analytics
+start.bat
+```
+
+### **Opción 2: Manual**
+```cmd
+# Terminal 1 - Backend
+cd backend
+.\venv\Scripts\activate
+python -m uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+
+# Terminal 2 - Frontend
+cd frontend
+npm run dev
+```
+
+### **URLs de Acceso**
+- **Frontend:** http://localhost:5173
+- **Backend API:** http://localhost:8000
+- **Documentación Swagger:** http://localhost:8000/docs
+
+---
+
+## ✅ **CONFIGURACIÓN AUTOMÁTICA**
+
+**El backend ahora se autoconfigura al iniciar:**
+- ✅ Lee automáticamente `backend/settings.json`
+- ✅ Carga datos desde `../data/input` al iniciar
+- ✅ **NO necesitas configurar manualmente cada vez**
+
+Si por alguna razón falla la carga automática:
+1. Ir a http://localhost:8000/docs
+2. POST `/api/settings` → `{"data_folder": "../data/input"}`
+3. POST `/api/data/reload`
+
+---
 
 ## 🎯 Objetivo del Producto
 

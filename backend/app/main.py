@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import logging
+import json
 
 from app.core.config import settings
 from app.api import health, settings as settings_api, data, reports
@@ -49,6 +50,40 @@ async def startup_event():
     logger.info(f"CORS Origins: {origins}")
     logger.info(f"OpenAI TTS: {'Configurado' if settings.openai_api_key else 'NO configurado (modo simulación)'}")
     logger.info(f"Twilio WhatsApp: {'Configurado' if settings.twilio_account_sid else 'NO configurado (modo simulación)'}")
+    
+    # Autoconfigurar data folder al inicio
+    from app.services.data_loader import data_loader
+    from pathlib import Path
+    
+    # Intentar cargar configuración guardada
+    settings_file = Path("settings.json")
+    default_data_folder = "../data/input"
+    
+    if settings_file.exists():
+        try:
+            with open(settings_file, 'r', encoding='utf-8') as f:
+                saved_settings = json.load(f)
+                data_folder = saved_settings.get('data_folder', default_data_folder)
+        except Exception as e:
+            logger.warning(f"No se pudo cargar settings.json: {e}")
+            data_folder = default_data_folder
+    else:
+        data_folder = default_data_folder
+    
+    # Configurar y cargar datos automáticamente
+    try:
+        data_loader.set_data_folder(data_folder)
+        result = data_loader.reload_data()
+        
+        if result.get('success'):
+            logger.info(f"✅ Data folder autoconfigurado: {data_folder}")
+            logger.info(f"✅ Datos cargados: {result.get('files_loaded', {})}")
+        else:
+            logger.warning(f"⚠️ Data folder configurado pero con errores: {result.get('errors', [])}")
+    except Exception as e:
+        logger.warning(f"⚠️ No se pudieron cargar datos automáticamente: {e}")
+        logger.warning(f"   Usar POST /api/settings para configurar manualmente")
+    
     logger.info("=" * 60)
 
 @app.on_event("shutdown")

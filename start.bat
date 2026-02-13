@@ -1,60 +1,55 @@
 @echo off
-echo ========================================
-echo Solar PV Analytics - Iniciando Servicios
-echo ========================================
+echo ============================================
+echo   SOLAR PV ANALYTICS - INICIO AUTOMATICO
+echo ============================================
 echo.
 
-REM Verificar directorio
-if not exist "backend" (
-    echo Error: Ejecutar desde el directorio raiz del proyecto
+REM Verificar que settings.json existe
+if not exist "backend\settings.json" (
+    echo Creando settings.json...
+    echo {"data_folder": "../data/input", "last_reload": null, "files_loaded": {}} > backend\settings.json
+)
+
+REM Verificar que los datos existen
+if not exist "data\input\Parametros_Planta.xlsx" (
+    echo.
+    echo [ERROR] No se encuentran los archivos de datos
+    echo Por favor, ejecuta primero:
+    echo   cd backend
+    echo   .\venv\Scripts\activate
+    echo   python create_planta_data.py
+    echo   python create_historico_data.py
+    echo   python create_tickets_data.py
+    echo.
     pause
     exit /b 1
 )
 
-REM Iniciar Backend
-echo Iniciando Backend (FastAPI)...
-cd backend
-
-if not exist "venv" (
-    echo Creando entorno virtual...
-    python -m venv venv
-    call venv\Scripts\activate
-    pip install -r requirements.txt
-) else (
-    call venv\Scripts\activate
-)
-
-start "Backend - FastAPI" cmd /k "python -m uvicorn app.main:app --host 0.0.0.0 --port 8000"
-cd ..
-
-echo Backend iniciado
-echo   API: http://localhost:8000
-echo   Docs: http://localhost:8000/docs
+echo [OK] Archivos de configuracion verificados
 echo.
 
-timeout /t 3 /nobreak >nul
+REM Iniciar Backend
+echo Iniciando Backend FastAPI...
+start "Solar PV - Backend" cmd /k "cd backend && .\venv\Scripts\activate && python -m uvicorn app.main:app --reload --host 0.0.0.0 --port 8000"
+
+REM Esperar a que el backend inicie
+echo Esperando a que el backend inicie (5 segundos)...
+timeout /t 5 /nobreak > nul
 
 REM Iniciar Frontend
-echo Iniciando Frontend (React + Vite)...
-cd frontend
-
-if not exist "node_modules" (
-    echo Instalando dependencias...
-    call npm install
-)
-
-start "Frontend - Vite" cmd /k "npm run dev"
-cd ..
+echo Iniciando Frontend React...
+start "Solar PV - Frontend" cmd /k "cd frontend && npm run dev"
 
 echo.
-echo ========================================
-echo Aplicacion lista!
-echo ========================================
+echo ============================================
+echo   SERVICIOS INICIADOS
+echo ============================================
 echo.
-echo Abre tu navegador en: http://localhost:5173
+echo   Backend:  http://localhost:8000
+echo   Docs:     http://localhost:8000/docs
+echo   Frontend: http://localhost:5173
 echo.
-echo Presiona cualquier tecla para detener los servicios...
-pause >nul
-
-taskkill /FI "WINDOWTITLE eq Backend - FastAPI" /T /F
-taskkill /FI "WINDOWTITLE eq Frontend - Vite" /T /F
+echo   Presiona Ctrl+C en cada ventana para detener
+echo ============================================
+echo.
+pause
