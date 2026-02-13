@@ -35,7 +35,7 @@ pip install --only-binary :all: ^
     python-multipart==0.0.6 ^
     "pydantic>=2.10.0" ^
     "pydantic-settings>=2.7.0" ^
-    openpyxl==3.1.2 ^
+    "openpyxl>=3.1.5" ^
     reportlab==4.0.7 ^
     "Pillow>=11.0.0" ^
     openai==1.3.7 ^
