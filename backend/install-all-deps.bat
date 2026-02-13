@@ -49,7 +49,7 @@ if errorlevel 1 (
 
 echo.
 echo [5/6] Instalando dependencias adicionales...
-pip install --only-binary :all: python-dotenv==1.0.0 python-multipart==0.0.6 openpyxl==3.1.2 reportlab==4.0.7 Pillow==10.1.0 openai==1.3.7 twilio==8.10.3 python-dateutil==2.8.2 pytz==2023.3 aiofiles==23.2.1
+pip install --only-binary :all: python-dotenv==1.0.0 python-multipart==0.0.6 openpyxl==3.1.2 reportlab==4.0.7 "Pillow>=11.0.0" openai==1.3.7 twilio==8.10.3 python-dateutil==2.8.2 pytz==2023.3 aiofiles==23.2.1
 if errorlevel 1 (
     echo [ERROR] Fallo al instalar dependencias adicionales
     pause

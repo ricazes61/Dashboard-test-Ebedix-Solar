@@ -37,7 +37,7 @@ pip install --only-binary :all: ^
     "pydantic-settings>=2.7.0" ^
     openpyxl==3.1.2 ^
     reportlab==4.0.7 ^
-    Pillow==10.1.0 ^
+    "Pillow>=11.0.0" ^
     openai==1.3.7 ^
     twilio==8.10.3 ^
     python-dateutil==2.8.2 ^
