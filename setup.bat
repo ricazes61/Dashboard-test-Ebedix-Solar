@@ -18,9 +18,13 @@ REM Paso 2: Activar venv e instalar dependencias
 echo.
 echo [2/6] Instalando dependencias Python...
 call .\venv\Scripts\activate
-python -m pip install --upgrade pip setuptools wheel > nul 2>&1
-pip install -r requirements.txt
-echo    - Dependencias instaladas
+echo    - Actualizando pip...
+python -m pip install --upgrade pip setuptools wheel
+echo    - Instalando pandas y numpy...
+pip install --only-binary :all: "pandas>=3.0.0" "numpy>=2.0.0"
+echo    - Instalando resto de dependencias...
+pip install --only-binary :all: fastapi==0.104.1 uvicorn[standard]==0.24.0 python-dotenv==1.0.0 python-multipart==0.0.6 pydantic==2.5.0 pydantic-settings==2.1.0 openpyxl==3.1.2 reportlab==4.0.7 Pillow==10.1.0 openai==1.3.7 twilio==8.10.3 python-dateutil==2.8.2 pytz==2023.3 aiofiles==23.2.1
+echo    - Dependencias instaladas correctamente
 
 REM Paso 3: Crear settings.json
 echo.
@@ -50,10 +54,16 @@ REM Paso 6: Resumen
 cd ..
 echo.
 echo [6/6] Verificando instalacion...
+cd backend
+call .\venv\Scripts\activate
+echo.
+echo Verificando paquetes clave:
+pip list | findstr "fastapi uvicorn pandas numpy"
+cd ..
 echo.
 echo ============================================
 echo   SETUP COMPLETADO
-echo ============================================
+============================================
 echo.
 echo   Backend:  backend\venv activado
 echo   Frontend: node_modules instalado
