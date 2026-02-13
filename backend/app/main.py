@@ -24,7 +24,12 @@ app = FastAPI(
 )
 
 # Configurar CORS
-origins = settings.cors_origins.split(',')
+if settings.debug:
+    # En desarrollo, permitir todos los orígenes
+    origins = ["*"]
+else:
+    # En producción, usar orígenes específicos
+    origins = settings.cors_origins.split(',')
 
 app.add_middleware(
     CORSMiddleware,
@@ -32,6 +37,7 @@ app.add_middleware(
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
+    expose_headers=["*"]
 )
 
 # Incluir routers
