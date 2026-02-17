@@ -2,6 +2,26 @@
 
 Aplicación web full-stack para análisis ejecutivo de plantas solares fotovoltaicas. Demo realista y fácil de ejecutar localmente con arquitectura preparada para migración a producción.
 
+[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/ricazes61/Dashboard-test-Ebedix-Solar/releases/tag/v1.0.0)
+[![Python](https://img.shields.io/badge/python-3.11%2B-blue)](https://www.python.org/downloads/)
+[![Node](https://img.shields.io/badge/node-18%2B-green)](https://nodejs.org/)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+
+## 📦 **REPOSITORIO GITHUB**
+
+**🔗 Repository:** [Dashboard-test-Ebedix-Solar](https://github.com/ricazes61/Dashboard-test-Ebedix-Solar)
+
+```bash
+# Clonar repositorio
+git clone https://github.com/ricazes61/Dashboard-test-Ebedix-Solar.git
+cd Dashboard-test-Ebedix-Solar
+
+# O descargar última release
+# https://github.com/ricazes61/Dashboard-test-Ebedix-Solar/releases/tag/v1.0.0
+```
+
+---
+
 ## 🚀 **INICIO RÁPIDO**
 
 ### **Opción 1: Script Automático (Recomendado)**
